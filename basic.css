@@ -16,9 +16,10 @@ body {
   a {
     text-decoration: none;
     display: inline-block;
-    padding: 8px 16px;
-    margin-left:1300px;
-    margin-top:200px;
+    font-size: 200%;
+    padding: 20px 25px;
+    margin-left:1000px;
+    margin-top:50px;
   }
   
   a:hover {
