@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details form</title>
+    <link rel="stylesheet" href="details2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DETAILS</h1>
+        <form name="registration" class="registartion-form" onsubmit="return formValidation()">
+          <table>
+            <tr>
+              <td><label for="name">Name:</label></td>
+              <td><input type="text" name="name" id="name" placeholder="your name"></td>
+            </tr>
+            <tr>
+              <td><label for="password">Age:</label></td>
+              <td><input type="number" name="password" id="password"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="text" name="email" id="email" placeholder="your email"></td>
+              </tr>
+            <tr>
+              <td><label for="phoneNumber">Phone Number:</label></td>
+              <td><input type="number" name="phoneNumber" id="phoneNumber"></td>
+            </tr>
+            <tr>
+              <td><label for="gender">Gender:</label></td>
+              <td>Male <input type="radio" name="gender" value="male">
+                Female <input type="radio" name="gender" value="female">
+                Other <input type="radio" name="gender" value="other"></td>
+            </tr>
+            <tr>
+              <td><label for="language">BloodGroup</label></td>
+              <td>
+                <select name="language" id="language">
+                  <option value="">Select BloodGroup</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="about">About:</label></td>
+              <td><textarea name="about" id="about" placeholder="Write about yourself..."></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" class="submit" value="Save" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+</body>
+</html>
