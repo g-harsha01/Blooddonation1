@@ -1,47 +1,92 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Sign up / Login Form</title>
-  <link rel="stylesheet" href="./signup.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Slide Navbar</title>
-	<link rel="stylesheet" type="text/css" href="slide navbar style.css">
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form validation</title>
+    <link rel="stylesheet" href="signup.css" />
+	<script src="signup.js"></script>
+  </head>
+  <body>
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<link rel="stylesheet" href="https://raw.githubusercontent.com/Ahmed-Massoud/Login-and-sign-up-form/main/font.css">
+		
 	
-	<div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
-
-			<div class="signup">
-				<form>
-					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type="text" name="txt" placeholder="User name" required="">
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Sign up</button>
-				</form>
+	</head>
+	
+	<body>
+		
+		
+		<div id="container">
+			
+			
+			
+			
+			<div class="main" id="main">
+				
+			   
+				
+				<input type="checkbox" id="chk">
+				<div class="signup">
+					<label for="chk" class="sig">Sign up</label>
+	
+					<div class="user-box">
+						<input type="text" title="Enter Username" id="username" required autocomplete="off">
+	
+						<label id="usernameLabel">Username</label>
+	
+	
+						<img src="https://raw.githubusercontent.com/Ahmed-Massoud/Login-and-sign-up-form/main/logo.svg" alt="Logo" class="logo-img" id="userIcon" />
+	
+	
+						<i></i>
+					</div>
+					<div class="user-box">
+						<input type="text" title="Enter email" id="email" required autocomplete="off">
+						<label id="emailLabel">Email</label>
+						<img src="https://raw.githubusercontent.com/Ahmed-Massoud/Login-and-sign-up-form/main/logo.svg" alt="Logo" class="logo-img" id="emailIcon">
+					</div>
+					<div class="user-box">
+						<input type="password" title="Enter password" id="password" required autocomplete="off">
+						<label id="passwordLabel">Password</label>
+						<img src="https://raw.githubusercontent.com/Ahmed-Massoud/Login-and-sign-up-form/main/logo.svg" alt="Logo" class="logo-img" id="passIcon">
+					</div>
+	
+					<button onclick="check()" id="button">Sign up</button>
+	
+				</div>
+	
+				<div class="login">
+	
+					<label for="chk" class="log">Login</label>
+	
+	
+	
+					<div class="user-box">
+	
+						<input type="text" title="Enter Username" id="username2" required>
+	
+						<label>Username</label>
+	
+					</div>
+	
+					<div class="user-box">
+	
+						<input type="password" title="Enter password" id="password2" required>
+	
+						<label>Password</label>
+	
+					</div>
+					<button onclick="login()" id="button2">Login</button>
+	
+				</div>
+	
 			</div>
-
-			<div class="login">
-				<form>
-					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button onclick="window.location.href = 'details2.html';">Login</button>
-				</form>
-			</div>
-	</div>
-</body>
-</html>
-<!-- partial -->
-  
-</body>
+		  <script src="https://raw.githubusercontent.com/Ahmed-Massoud/Login-and-sign-up-form/main/sweetalert.min.js"></script>
+	</body>
+	
+  </body>
 </html>
