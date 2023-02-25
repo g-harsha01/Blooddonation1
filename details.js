@@ -1,7 +1,7 @@
 
 const name = document.getElementById("name");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
+const email = document.getElementById("email").value;
+//const password = document.getElementById("password");
 const phoneNumber = document.getElementById("phoneNumber");
 const gender = document.registration;
 const language = document.getElementById("language");
@@ -21,12 +21,7 @@ function formValidation() {
     email.focus();
     return false;
   }
-  // checking password
-  if (!password.value.match(/^.{5,15}$/)) {
-    alert("Password length must be between 5-15 characters!");
-    password.focus();
-    return false;
-  }
+  
   // checking phone number
   if (!phoneNumber.value.match(/^[1-9][0-9]{9}$/)) {
     alert("Phone number must be 10 characters long number and first digit can't be 0!");
