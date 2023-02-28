@@ -1,6 +1,11 @@
 body
    {
-     margin:0px; background-color:#27a465; color:#f7f7f7; font-family:Arial, Helvetica, sans-serif;
+     margin:0px;  color:#f7f7f7; font-family:Arial, Helvetica, sans-serif;
+     font-size: 130%;
+     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/381de62a-546c-4c2c-91c8-f3179bde7b20/dm9w4o-6b80cb86-3b42-43be-9d0e-18294bc594b0.jpg");
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    background-size: 1550px 1000px;
    }
    #main
    {
