@@ -1,3 +1,10 @@
+const login = [...document.querySelector('.login').children];
+login.forEach((item, i) => {
+	setTimeout(() => {
+		item.getElementsByClassName.opacity = 1;
+	}, i*100);
+})
+
 function registration()
 	{
 
