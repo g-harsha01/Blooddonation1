@@ -44,7 +44,7 @@
 	<td></td>
 	<td>
 	<input type="reset" value="Clear Form" onclick="clearFunc()" id="res" class="btn" />
-	<input type="submit" value="Create Account" class="btn" onclick="registration()" /></td>
+	<input type="submit" value="Create Account" id="signUP" class="btn" onclick="registration()" /></td>
 	</tr>
 	</table>
 	</div>
@@ -56,4 +56,52 @@
     <h3 style="text-align: center;">Already have an account? <a href="login1.html">Login Here</a></h3>
 	</div>
 	</body>
+
+	<script type="module">
+	
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+		import { getDatabase } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
+		import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
+	
+		const firebaseConfig = {
+		  apiKey: "AIzaSyAhC7Jkg7LQC7axH2iotEqlsVxN8ewLiOs",
+		  authDomain: "bloodline-auth.firebaseapp.com",
+		  databaseURL: "https://bloodline-auth-default-rtdb.firebaseio.com",
+		  projectId: "bloodline-auth",
+		  storageBucket: "bloodline-auth.appspot.com",
+		  messagingSenderId: "599500515376",
+		  appId: "1:599500515376:web:45c108139bbf23e2c425f5"
+		};
+	  
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const database = getDatabase(app)
+		const auth = getAuth()
+	  
+	  signUP.addEventListener('click',(e) => {
+		
+		var email = document.getElementById('t2').value;
+		var username = document.getElementById('t3').value;
+		var password = document.getElementById('t4').value;
+
+		createUserWithEmailAndPassword(auth, email, password)
+  			.then((userCredential) => {
+    
+    		  const user = userCredential.user;
+    
+  			})
+  			.catch((error) => {
+    		  const errorCode = error.code;
+    		  const errorMessage = error.message;
+				
+			  
+  			});
+
+
+
+
+	  });
+	
+	  </script>
+
 	</html>
