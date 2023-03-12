@@ -1,0 +1,32 @@
+body
+    {
+	    margin:0px;
+	    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/381de62a-546c-4c2c-91c8-f3179bde7b20/dm9w4o-6b80cb86-3b42-43be-9d0e-18294bc594b0.jpg");
+        background-attachment:scroll;
+        background-repeat: no-repeat;
+        background-size: 1550px 1000px;
+	    font-family:Arial, Helvetica, sans-serif;
+    }
+
+h1 {
+    font-size: 300%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+    margin-left: 30px;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
+    margin-left: 25px;
+}
+.form-group {
+    margin-left: 25px;
+    font-size: 125%;
+}
+.form-control {
+    font-size: 80%;
+}
