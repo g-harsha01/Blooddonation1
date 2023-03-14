@@ -1,3 +1,33 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyAhC7Jkg7LQC7axH2iotEqlsVxN8ewLiOs",
+    authDomain: "bloodline-auth.firebaseapp.com",
+    databaseURL: "https://bloodline-auth-default-rtdb.firebaseio.com",
+    projectId: "bloodline-auth",
+    storageBucket: "bloodline-auth.appspot.com",
+    messagingSenderId: "599500515376",
+    appId: "1:599500515376:web:45c108139bbf23e2c425f5"
+  };
+
+  
+
+firebase.initializeApp(firebaseConfig);
+
+var database = firebase.database().ref('main')
+
+document.getElementById("main").addEventListener("submit",registration);
+
+const saveMessages = (t1,t2,t3,t4,t5) => {
+	var newContactForm = database.push();
+
+	newContactForm.set({
+		name : t1,
+		email : t2,
+		username : t3,
+		password: t4,
+		
+	})
+
+}
 const login = [...document.querySelector('.login').children];
 login.forEach((item, i) => {
 	setTimeout(() => {
@@ -70,10 +100,14 @@ function registration()
 		else
 		{				                            
                alert('Thank You for Login & You are Redirecting to login page');
-			   // Redirecting to other page or webste code. 
+			   // Redirecting to other page or website code. 
 			   window.location = "login1.html"; 
 		}
+		saveMessages(name,email,uname,pwd,cpwd);
 	}
+
+	
+
 	function clearFunc()
 	{
 		document.getElementById("t1").value="";
