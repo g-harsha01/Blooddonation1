@@ -10,7 +10,6 @@
   
   
   </head>
-
 	<body>
 	<!-- Main div code -->
 	<div id="main">
@@ -55,17 +54,11 @@
   	 <!-- login box div ending here.. -->
     <h3 style="text-align: center;">Already have an account? <a href="login1.html">Login Here</a></h3>
 	</div>
-
-	<script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app-compat.js"></script>
-	
-	<script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth-compat.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-database-compat.js"></script>
-	<script src="signup1.js"></script>
 	</body>
-
 	<script type="module">
 	
 		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+		import { getDatabase } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 		import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
 	
 		const firebaseConfig = {
@@ -80,6 +73,7 @@
 	  
 		// Initialize Firebase
 		const app = initializeApp(firebaseConfig);
+		const database = getDatabase(app)
 		const auth = getAuth()
 	  
 	  signUP.addEventListener('click',(e) => {
@@ -87,7 +81,6 @@
 		var email = document.getElementById('t2').value;
 		var username = document.getElementById('t3').value;
 		var password = document.getElementById('t4').value;
-
 		createUserWithEmailAndPassword(auth, email, password)
   			.then((userCredential) => {
     
@@ -100,13 +93,8 @@
 				
 			  
   			});
-
-
-
-
 	  });
 	
 	  </script>
 	
-
 	</html>
